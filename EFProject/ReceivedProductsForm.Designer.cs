@@ -70,7 +70,7 @@
             this.txbProdDate.Location = new System.Drawing.Point(165, 117);
             this.txbProdDate.Name = "txbProdDate";
             this.txbProdDate.Size = new System.Drawing.Size(164, 27);
-            this.txbProdDate.TabIndex = 35;
+            this.txbProdDate.TabIndex = 1;
             // 
             // label8
             // 
@@ -88,7 +88,7 @@
             this.txbCount.Location = new System.Drawing.Point(165, 319);
             this.txbCount.Name = "txbCount";
             this.txbCount.Size = new System.Drawing.Size(164, 27);
-            this.txbCount.TabIndex = 33;
+            this.txbCount.TabIndex = 7;
             // 
             // label9
             // 
@@ -133,7 +133,7 @@
             this.btnAdd.Location = new System.Drawing.Point(72, 403);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(86, 35);
-            this.btnAdd.TabIndex = 26;
+            this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -155,7 +155,7 @@
             this.txbID.Location = new System.Drawing.Point(165, 85);
             this.txbID.Name = "txbID";
             this.txbID.Size = new System.Drawing.Size(164, 27);
-            this.txbID.TabIndex = 24;
+            this.txbID.TabIndex = 0;
             // 
             // panel2
             // 
@@ -226,7 +226,7 @@
             this.txbExpDate.Location = new System.Drawing.Point(165, 149);
             this.txbExpDate.Name = "txbExpDate";
             this.txbExpDate.Size = new System.Drawing.Size(164, 27);
-            this.txbExpDate.TabIndex = 22;
+            this.txbExpDate.TabIndex = 2;
             // 
             // btnEdit
             // 
@@ -241,7 +241,7 @@
             this.btnEdit.Location = new System.Drawing.Point(72, 362);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(86, 35);
-            this.btnEdit.TabIndex = 19;
+            this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -331,7 +331,7 @@
             this.btnTransfer.Location = new System.Drawing.Point(209, 403);
             this.btnTransfer.Name = "btnTransfer";
             this.btnTransfer.Size = new System.Drawing.Size(86, 35);
-            this.btnTransfer.TabIndex = 41;
+            this.btnTransfer.TabIndex = 11;
             this.btnTransfer.Text = "Transfer";
             this.btnTransfer.UseVisualStyleBackColor = false;
             this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
@@ -343,7 +343,7 @@
             this.cbxWareID2.Location = new System.Drawing.Point(165, 284);
             this.cbxWareID2.Name = "cbxWareID2";
             this.cbxWareID2.Size = new System.Drawing.Size(164, 29);
-            this.cbxWareID2.TabIndex = 40;
+            this.cbxWareID2.TabIndex = 6;
             this.cbxWareID2.Enter += new System.EventHandler(this.comboBox1_Enter);
             // 
             // label2
@@ -363,7 +363,7 @@
             this.cbxWareID.Location = new System.Drawing.Point(165, 249);
             this.cbxWareID.Name = "cbxWareID";
             this.cbxWareID.Size = new System.Drawing.Size(164, 29);
-            this.cbxWareID.TabIndex = 38;
+            this.cbxWareID.TabIndex = 5;
             this.cbxWareID.Enter += new System.EventHandler(this.cbxWareID_Enter);
             // 
             // cbxSuppID
@@ -373,7 +373,7 @@
             this.cbxSuppID.Location = new System.Drawing.Point(165, 215);
             this.cbxSuppID.Name = "cbxSuppID";
             this.cbxSuppID.Size = new System.Drawing.Size(164, 29);
-            this.cbxSuppID.TabIndex = 37;
+            this.cbxSuppID.TabIndex = 4;
             this.cbxSuppID.Enter += new System.EventHandler(this.cbxSuppID_Enter);
             // 
             // cbxProductID
@@ -383,7 +383,7 @@
             this.cbxProductID.Location = new System.Drawing.Point(165, 181);
             this.cbxProductID.Name = "cbxProductID";
             this.cbxProductID.Size = new System.Drawing.Size(164, 29);
-            this.cbxProductID.TabIndex = 36;
+            this.cbxProductID.TabIndex = 3;
             this.cbxProductID.Enter += new System.EventHandler(this.cbxProductID_Enter);
             // 
             // btnDelete
@@ -399,7 +399,7 @@
             this.btnDelete.Location = new System.Drawing.Point(209, 362);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(86, 35);
-            this.btnDelete.TabIndex = 20;
+            this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);

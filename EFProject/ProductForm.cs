@@ -63,12 +63,12 @@ namespace EFProject
                 if (wantedProduct != null)
                 {
                     txbProductID.Text = wantedProduct.ID.ToString().Trim();
-                    txbProductName.Text = wantedProduct.Name;
+                    txbProductName.Text = wantedProduct.Name.Trim();
 
                     LoadDataToComboBox();
 
                     cbxProductSuppliers.Text = "";
-                    cbxProductSuppliers.Text = wantedProduct.SupplierID.ToString();
+                    cbxProductSuppliers.Text = wantedProduct.SupplierID.ToString().Trim();
 
                     txbProductUnits.Text = string.Join(",", wantedProduct.ProductUnits.Select(s => s.Unit.Trim()));
                 }
@@ -108,28 +108,37 @@ namespace EFProject
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var product = _context.Products.Find(int.Parse(txbProductID.Text.Trim()));
-            if (product == null)
+            try
             {
-                product = new Product() { ID = int.Parse(txbProductID.Text.Trim()), Name = txbProductName.Text.Trim(), SupplierID = int.Parse(cbxProductSuppliers.Text) };
-                string[] units = txbProductUnits.Text.Trim().Split(',');
-                for (int i = 0; i < units.Length; i++)
+                var product = _context.Products.Find(int.Parse(txbProductID.Text.Trim()));
+                if (product == null)
                 {
-                    if (i == 0)
+                    product = new Product() { ID = int.Parse(txbProductID.Text.Trim()), Name = txbProductName.Text.Trim(), SupplierID = int.Parse(cbxProductSuppliers.Text) };
+                    string[] units = txbProductUnits.Text.Trim().Split(',');
+                    for (int i = 0; i < units.Length; i++)
                     {
-                        product.ProductUnits.Clear();
+                        if (i == 0)
+                        {
+                            product.ProductUnits.Clear();
+                        }
+                        product.ProductUnits.Add(new ProductUnit { Unit = units[i].Trim(), Product = product, ProductID = product.ID });
                     }
-                    product.ProductUnits.Add(new ProductUnit { Unit = units[i].Trim(), Product = product, ProductID = product.ID });
+                    _context.Products.Add(product);
+                    _context.SaveChangesAsync();
+                    DisplayMessageBox(true);
                 }
-                _context.Products.Add(product);
-                _context.SaveChangesAsync();
-                DisplayMessageBox(true);
+                else
+                {
+                    DisplayMessageBox(false);
+                }
+                BindDataToDataGrid();
             }
-            else
+            catch (Exception)
             {
+
                 DisplayMessageBox(false);
+
             }
-            BindDataToDataGrid();
         }
 
         private static void DisplayMessageBox(bool flag)

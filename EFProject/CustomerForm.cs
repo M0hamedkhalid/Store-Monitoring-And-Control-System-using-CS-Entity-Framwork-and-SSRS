@@ -88,14 +88,14 @@ namespace EFProject
                 var wantedCustomer = _context.Customers.Find(id);
                 if (wantedCustomer != null)
                 {
-                    txbCustName.Text = wantedCustomer.Name;
-                    txbCutID.Text = wantedCustomer.ID.ToString();
-                    txbAddress.Text = wantedCustomer.Address;
-                    txbFax.Text = wantedCustomer.Fax.ToString();
-                    txbMail.Text = wantedCustomer.Mail;
-                    txbMobile.Text = wantedCustomer.Mobile.ToString();
-                    txbPhone.Text = wantedCustomer.Phone.ToString();
-                    txbWebsite.Text = wantedCustomer.Website;
+                    txbCustName.Text = wantedCustomer.Name.Trim();
+                    txbCutID.Text = wantedCustomer.ID.ToString().Trim();
+                    txbAddress.Text = wantedCustomer.Address.Trim();
+                    txbFax.Text = wantedCustomer.Fax.ToString().Trim();
+                    txbMail.Text = wantedCustomer.Mail.Trim();
+                    txbMobile.Text = wantedCustomer.Mobile.ToString().Trim();
+                    txbPhone.Text = wantedCustomer.Phone.ToString().Trim();
+                    txbWebsite.Text = wantedCustomer.Website.Trim();
                 }
             }
             catch (Exception)
@@ -136,7 +136,16 @@ namespace EFProject
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Add();
+            try
+            {
+                Add();
+            }
+            catch (Exception)
+            {
+
+                DisplayMessageBox(false);
+
+            }
             BindDataToDataGrid();
         }
 

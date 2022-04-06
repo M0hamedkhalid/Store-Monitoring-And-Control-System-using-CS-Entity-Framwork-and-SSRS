@@ -73,9 +73,9 @@
             this.panel2.Controls.Add(this.splitter6);
             this.panel2.Controls.Add(this.splitter5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(1, 1);
+            this.panel2.Location = new System.Drawing.Point(2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(533, 214);
+            this.panel2.Size = new System.Drawing.Size(531, 212);
             this.panel2.TabIndex = 5;
             // 
             // lblMessage
@@ -83,7 +83,7 @@
             this.lblMessage.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.lblMessage.Location = new System.Drawing.Point(156, 98);
+            this.lblMessage.Location = new System.Drawing.Point(155, 98);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(222, 20);
             this.lblMessage.TabIndex = 20;
@@ -100,7 +100,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(224, 138);
+            this.button1.Location = new System.Drawing.Point(223, 138);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 35);
             this.button1.TabIndex = 19;
@@ -120,9 +120,9 @@
             // splitter7
             // 
             this.splitter7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter7.Location = new System.Drawing.Point(528, 5);
+            this.splitter7.Location = new System.Drawing.Point(526, 5);
             this.splitter7.Name = "splitter7";
-            this.splitter7.Size = new System.Drawing.Size(5, 209);
+            this.splitter7.Size = new System.Drawing.Size(5, 207);
             this.splitter7.TabIndex = 2;
             this.splitter7.TabStop = false;
             // 
@@ -131,7 +131,7 @@
             this.splitter6.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter6.Location = new System.Drawing.Point(5, 0);
             this.splitter6.Name = "splitter6";
-            this.splitter6.Size = new System.Drawing.Size(528, 5);
+            this.splitter6.Size = new System.Drawing.Size(526, 5);
             this.splitter6.TabIndex = 1;
             this.splitter6.TabStop = false;
             // 
@@ -139,54 +139,66 @@
             // 
             this.splitter5.Location = new System.Drawing.Point(0, 0);
             this.splitter5.Name = "splitter5";
-            this.splitter5.Size = new System.Drawing.Size(5, 214);
+            this.splitter5.Size = new System.Drawing.Size(5, 212);
             this.splitter5.TabIndex = 0;
             this.splitter5.TabStop = false;
             // 
             // pnlDown
             // 
             this.pnlDown.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlDown.Location = new System.Drawing.Point(1, 215);
+            this.pnlDown.Location = new System.Drawing.Point(2, 214);
             this.pnlDown.Name = "pnlDown";
-            this.pnlDown.Size = new System.Drawing.Size(533, 27);
+            this.pnlDown.Size = new System.Drawing.Size(531, 27);
             this.pnlDown.TabIndex = 4;
             // 
             // splitter4
             // 
             this.splitter4.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.splitter4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitter4.Cursor = System.Windows.Forms.Cursors.Default;
             this.splitter4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitter4.Location = new System.Drawing.Point(1, 242);
+            this.splitter4.Enabled = false;
+            this.splitter4.Location = new System.Drawing.Point(2, 241);
             this.splitter4.Name = "splitter4";
-            this.splitter4.Size = new System.Drawing.Size(533, 1);
+            this.splitter4.Size = new System.Drawing.Size(531, 2);
             this.splitter4.TabIndex = 3;
             this.splitter4.TabStop = false;
             // 
             // splitter3
             // 
             this.splitter3.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.splitter3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitter3.Cursor = System.Windows.Forms.Cursors.Default;
             this.splitter3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter3.Location = new System.Drawing.Point(534, 1);
+            this.splitter3.Enabled = false;
+            this.splitter3.Location = new System.Drawing.Point(533, 2);
             this.splitter3.Name = "splitter3";
-            this.splitter3.Size = new System.Drawing.Size(1, 242);
+            this.splitter3.Size = new System.Drawing.Size(2, 241);
             this.splitter3.TabIndex = 2;
             this.splitter3.TabStop = false;
             // 
             // splitter2
             // 
             this.splitter2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.splitter2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitter2.Cursor = System.Windows.Forms.Cursors.Default;
             this.splitter2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter2.Location = new System.Drawing.Point(1, 0);
+            this.splitter2.Enabled = false;
+            this.splitter2.Location = new System.Drawing.Point(2, 0);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(534, 1);
+            this.splitter2.Size = new System.Drawing.Size(533, 2);
             this.splitter2.TabIndex = 1;
             this.splitter2.TabStop = false;
             // 
             // splitter1
             // 
             this.splitter1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitter1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.splitter1.Enabled = false;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(1, 243);
+            this.splitter1.Size = new System.Drawing.Size(2, 243);
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
             // 

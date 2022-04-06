@@ -134,12 +134,12 @@ namespace EFProject
                          , supID, warID);
                 if (bill != null)
                 {
-                    txbID.Text = bill.BillNo.ToString();
-                    txbBillDate.Text = bill.BillDate.ToString("MM/dd/yyyy");
-                    cbxCustID.Text = bill.CustomerID.ToString();
-                    cbxWareID.Text = bill.WarehouseID.ToString();
-                    cbxProductID.Text = bill.ProductID.ToString();
-                    txbCount.Text = bill.Count.ToString();
+                    txbID.Text = bill.BillNo.ToString().Trim();
+                    txbBillDate.Text = bill.BillDate.ToString("MM/dd/yyyy").Trim();
+                    cbxCustID.Text = bill.CustomerID.ToString().Trim();
+                    cbxWareID.Text = bill.WarehouseID.ToString().Trim();
+                    cbxProductID.Text = bill.ProductID.ToString().Trim();
+                    txbCount.Text = bill.Count.ToString().Trim();
                 }
             }
             catch (Exception)
@@ -180,7 +180,16 @@ namespace EFProject
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Add();
+            try
+            {
+                Add();
+            }
+            catch (Exception)
+            {
+
+                DisplayMessageBox(false);
+
+            }
             BindDataToDataGrid();
             MakeTextBoxBlank();
         }

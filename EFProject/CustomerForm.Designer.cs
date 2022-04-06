@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -95,24 +95,24 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 26;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.EnableHeadersVisualStyles = false;
@@ -166,7 +166,7 @@
             this.txbAddress.Location = new System.Drawing.Point(165, 151);
             this.txbAddress.Name = "txbAddress";
             this.txbAddress.Size = new System.Drawing.Size(164, 27);
-            this.txbAddress.TabIndex = 35;
+            this.txbAddress.TabIndex = 2;
             // 
             // label8
             // 
@@ -184,7 +184,7 @@
             this.txbWebsite.Location = new System.Drawing.Point(165, 318);
             this.txbWebsite.Name = "txbWebsite";
             this.txbWebsite.Size = new System.Drawing.Size(164, 27);
-            this.txbWebsite.TabIndex = 33;
+            this.txbWebsite.TabIndex = 7;
             // 
             // label9
             // 
@@ -202,7 +202,7 @@
             this.txbMail.Location = new System.Drawing.Point(165, 285);
             this.txbMail.Name = "txbMail";
             this.txbMail.Size = new System.Drawing.Size(164, 27);
-            this.txbMail.TabIndex = 31;
+            this.txbMail.TabIndex = 6;
             // 
             // label7
             // 
@@ -220,7 +220,7 @@
             this.txbPhone.Location = new System.Drawing.Point(165, 252);
             this.txbPhone.Name = "txbPhone";
             this.txbPhone.Size = new System.Drawing.Size(164, 27);
-            this.txbPhone.TabIndex = 29;
+            this.txbPhone.TabIndex = 5;
             // 
             // label6
             // 
@@ -238,7 +238,7 @@
             this.txbFax.Location = new System.Drawing.Point(165, 219);
             this.txbFax.Name = "txbFax";
             this.txbFax.Size = new System.Drawing.Size(164, 27);
-            this.txbFax.TabIndex = 27;
+            this.txbFax.TabIndex = 4;
             // 
             // btnAdd
             // 
@@ -276,7 +276,7 @@
             this.txbCutID.Location = new System.Drawing.Point(165, 85);
             this.txbCutID.Name = "txbCutID";
             this.txbCutID.Size = new System.Drawing.Size(164, 27);
-            this.txbCutID.TabIndex = 24;
+            this.txbCutID.TabIndex = 0;
             // 
             // label4
             // 
@@ -294,7 +294,7 @@
             this.txbMobile.Location = new System.Drawing.Point(165, 186);
             this.txbMobile.Name = "txbMobile";
             this.txbMobile.Size = new System.Drawing.Size(164, 27);
-            this.txbMobile.TabIndex = 22;
+            this.txbMobile.TabIndex = 3;
             // 
             // btnDelete
             // 
@@ -360,7 +360,7 @@
             this.txbCustName.Location = new System.Drawing.Point(165, 118);
             this.txbCustName.Name = "txbCustName";
             this.txbCustName.Size = new System.Drawing.Size(164, 27);
-            this.txbCustName.TabIndex = 16;
+            this.txbCustName.TabIndex = 1;
             // 
             // splitter2
             // 

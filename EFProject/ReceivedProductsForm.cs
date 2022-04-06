@@ -197,7 +197,16 @@ namespace EFProject
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Add();
+            try
+            {
+                Add();
+            }
+            catch (Exception)
+            {
+
+                DisplayMessageBox(false);
+
+            }
             BindDataToDataGrid();
             MakeTextBoxBlank();
         }

@@ -97,7 +97,7 @@
             this.txbAdd.Location = new System.Drawing.Point(189, 181);
             this.txbAdd.Name = "txbAdd";
             this.txbAdd.Size = new System.Drawing.Size(164, 27);
-            this.txbAdd.TabIndex = 27;
+            this.txbAdd.TabIndex = 2;
             // 
             // btnAdd
             // 
@@ -113,7 +113,7 @@
             this.btnAdd.Location = new System.Drawing.Point(124, 362);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(86, 35);
-            this.btnAdd.TabIndex = 26;
+            this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -135,7 +135,7 @@
             this.txbID.Location = new System.Drawing.Point(189, 87);
             this.txbID.Name = "txbID";
             this.txbID.Size = new System.Drawing.Size(164, 27);
-            this.txbID.TabIndex = 24;
+            this.txbID.TabIndex = 0;
             // 
             // label4
             // 
@@ -153,7 +153,7 @@
             this.txbMgr.Location = new System.Drawing.Point(189, 231);
             this.txbMgr.Name = "txbMgr";
             this.txbMgr.Size = new System.Drawing.Size(164, 27);
-            this.txbMgr.TabIndex = 22;
+            this.txbMgr.TabIndex = 3;
             // 
             // btnDelete
             // 
@@ -169,7 +169,7 @@
             this.btnDelete.Location = new System.Drawing.Point(195, 315);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(86, 35);
-            this.btnDelete.TabIndex = 20;
+            this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -188,7 +188,7 @@
             this.btnEdit.Location = new System.Drawing.Point(58, 315);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(86, 35);
-            this.btnEdit.TabIndex = 19;
+            this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -219,7 +219,7 @@
             this.txbName.Location = new System.Drawing.Point(189, 135);
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(164, 27);
-            this.txbName.TabIndex = 16;
+            this.txbName.TabIndex = 1;
             // 
             // splitter2
             // 

@@ -69,7 +69,7 @@
             this.txbAddress.Location = new System.Drawing.Point(165, 151);
             this.txbAddress.Name = "txbAddress";
             this.txbAddress.Size = new System.Drawing.Size(164, 27);
-            this.txbAddress.TabIndex = 35;
+            this.txbAddress.TabIndex = 2;
             // 
             // label8
             // 
@@ -87,7 +87,7 @@
             this.txbWebsite.Location = new System.Drawing.Point(165, 318);
             this.txbWebsite.Name = "txbWebsite";
             this.txbWebsite.Size = new System.Drawing.Size(164, 27);
-            this.txbWebsite.TabIndex = 33;
+            this.txbWebsite.TabIndex = 7;
             // 
             // label9
             // 
@@ -105,7 +105,7 @@
             this.txbMail.Location = new System.Drawing.Point(165, 285);
             this.txbMail.Name = "txbMail";
             this.txbMail.Size = new System.Drawing.Size(164, 27);
-            this.txbMail.TabIndex = 31;
+            this.txbMail.TabIndex = 6;
             // 
             // label7
             // 
@@ -123,7 +123,7 @@
             this.txbPhone.Location = new System.Drawing.Point(165, 252);
             this.txbPhone.Name = "txbPhone";
             this.txbPhone.Size = new System.Drawing.Size(164, 27);
-            this.txbPhone.TabIndex = 29;
+            this.txbPhone.TabIndex = 5;
             // 
             // label6
             // 
@@ -141,7 +141,7 @@
             this.txbFax.Location = new System.Drawing.Point(165, 219);
             this.txbFax.Name = "txbFax";
             this.txbFax.Size = new System.Drawing.Size(164, 27);
-            this.txbFax.TabIndex = 27;
+            this.txbFax.TabIndex = 4;
             // 
             // btnAdd
             // 
@@ -157,7 +157,7 @@
             this.btnAdd.Location = new System.Drawing.Point(147, 409);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(86, 35);
-            this.btnAdd.TabIndex = 26;
+            this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
@@ -179,7 +179,7 @@
             this.txbID.Location = new System.Drawing.Point(165, 85);
             this.txbID.Name = "txbID";
             this.txbID.Size = new System.Drawing.Size(164, 27);
-            this.txbID.TabIndex = 24;
+            this.txbID.TabIndex = 0;
             // 
             // label4
             // 
@@ -197,7 +197,7 @@
             this.txbMobile.Location = new System.Drawing.Point(165, 186);
             this.txbMobile.Name = "txbMobile";
             this.txbMobile.Size = new System.Drawing.Size(164, 27);
-            this.txbMobile.TabIndex = 22;
+            this.txbMobile.TabIndex = 3;
             // 
             // btnDelete
             // 
@@ -213,7 +213,7 @@
             this.btnDelete.Location = new System.Drawing.Point(216, 362);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(86, 35);
-            this.btnDelete.TabIndex = 20;
+            this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -232,7 +232,7 @@
             this.btnEdit.Location = new System.Drawing.Point(72, 362);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(86, 35);
-            this.btnEdit.TabIndex = 19;
+            this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -263,7 +263,7 @@
             this.txbName.Location = new System.Drawing.Point(165, 118);
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(164, 27);
-            this.txbName.TabIndex = 16;
+            this.txbName.TabIndex = 1;
             // 
             // splitter2
             // 

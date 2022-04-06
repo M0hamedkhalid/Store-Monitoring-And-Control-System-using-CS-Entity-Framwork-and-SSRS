@@ -44,14 +44,14 @@ namespace EFProject
                 var wantedSupp = _context.Suppliers.Find(id);
                 if (wantedSupp != null)
                 {
-                    txbName.Text = wantedSupp.Name;
-                    txbID.Text = wantedSupp.ID.ToString();
-                    txbAddress.Text = wantedSupp.Address;
-                    txbFax.Text = wantedSupp.Fax.ToString();
+                    txbName.Text = wantedSupp.Name.Trim();
+                    txbID.Text = wantedSupp.ID.ToString().Trim();
+                    txbAddress.Text = wantedSupp.Address.Trim();
+                    txbFax.Text = wantedSupp.Fax.ToString().Trim();
                     txbMail.Text = wantedSupp.Mail;
-                    txbMobile.Text = wantedSupp.Mobile.ToString();
-                    txbPhone.Text = wantedSupp.Phone.ToString();
-                    txbWebsite.Text = wantedSupp.Website;
+                    txbMobile.Text = wantedSupp.Mobile.ToString().Trim();
+                    txbPhone.Text = wantedSupp.Phone.ToString().Trim();
+                    txbWebsite.Text = wantedSupp.Website.Trim();
 
                 }
             }
@@ -150,7 +150,16 @@ namespace EFProject
      
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            Add();
+            try
+            {
+                Add();
+            }
+            catch (Exception)
+            {
+
+                    DisplayMessageBox(false);
+
+            }
             BindDataToDataGrid();
         }
 

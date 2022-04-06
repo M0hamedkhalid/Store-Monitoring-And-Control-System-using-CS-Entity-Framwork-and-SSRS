@@ -220,7 +220,7 @@
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(250, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1050, 58);
+            this.pnlHeader.Size = new System.Drawing.Size(1016, 58);
             this.pnlHeader.TabIndex = 1;
             this.pnlHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlHeader_MouseDown);
             // 
@@ -241,7 +241,7 @@
             this.iconMinimiz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconMinimiz.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconMinimiz.Image = ((System.Drawing.Image)(resources.GetObject("iconMinimiz.Image")));
-            this.iconMinimiz.Location = new System.Drawing.Point(968, 12);
+            this.iconMinimiz.Location = new System.Drawing.Point(934, 12);
             this.iconMinimiz.Name = "iconMinimiz";
             this.iconMinimiz.Size = new System.Drawing.Size(18, 18);
             this.iconMinimiz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -254,7 +254,7 @@
             this.iconNormal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconNormal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconNormal.Image = ((System.Drawing.Image)(resources.GetObject("iconNormal.Image")));
-            this.iconNormal.Location = new System.Drawing.Point(996, 12);
+            this.iconNormal.Location = new System.Drawing.Point(962, 12);
             this.iconNormal.Name = "iconNormal";
             this.iconNormal.Size = new System.Drawing.Size(18, 18);
             this.iconNormal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -268,7 +268,7 @@
             this.iconMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconMaximize.Image = ((System.Drawing.Image)(resources.GetObject("iconMaximize.Image")));
-            this.iconMaximize.Location = new System.Drawing.Point(994, 12);
+            this.iconMaximize.Location = new System.Drawing.Point(960, 12);
             this.iconMaximize.Name = "iconMaximize";
             this.iconMaximize.Size = new System.Drawing.Size(18, 18);
             this.iconMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -281,7 +281,7 @@
             this.iconExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconExit.Image = ((System.Drawing.Image)(resources.GetObject("iconExit.Image")));
-            this.iconExit.Location = new System.Drawing.Point(1020, 12);
+            this.iconExit.Location = new System.Drawing.Point(986, 12);
             this.iconExit.Name = "iconExit";
             this.iconExit.Size = new System.Drawing.Size(18, 18);
             this.iconExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -294,7 +294,7 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(250, 58);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1050, 592);
+            this.pnlMain.Size = new System.Drawing.Size(1016, 592);
             this.pnlMain.TabIndex = 2;
             // 
             // MainForm
@@ -302,7 +302,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1300, 650);
+            this.ClientSize = new System.Drawing.Size(1266, 650);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.panelLeft);

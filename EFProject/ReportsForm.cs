@@ -25,9 +25,7 @@ namespace EFProject
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("sdasd");
-            this.reportViewer1.LocalReport.DisplayName = "ReportName";
-            this.reportViewer1.LocalReport.ReportPath = "D:/ITI/C#/ADO & LINQ/Project/EFProject/EFProject/Reports/Report2.rdlc";
+            this.reportViewer1.ServerReport.ReportPath = "/Report Project3/Report1";
             this.reportViewer1.RefreshReport();
 
         }

@@ -75,7 +75,7 @@
             this.txbCount.Location = new System.Drawing.Point(165, 311);
             this.txbCount.Name = "txbCount";
             this.txbCount.Size = new System.Drawing.Size(164, 27);
-            this.txbCount.TabIndex = 33;
+            this.txbCount.TabIndex = 5;
             // 
             // btnAdd
             // 
@@ -91,7 +91,7 @@
             this.btnAdd.Location = new System.Drawing.Point(147, 403);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(86, 35);
-            this.btnAdd.TabIndex = 26;
+            this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -113,7 +113,7 @@
             this.txbID.Location = new System.Drawing.Point(165, 85);
             this.txbID.Name = "txbID";
             this.txbID.Size = new System.Drawing.Size(164, 27);
-            this.txbID.TabIndex = 24;
+            this.txbID.TabIndex = 0;
             // 
             // btnDelete
             // 
@@ -129,7 +129,7 @@
             this.btnDelete.Location = new System.Drawing.Point(217, 362);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(86, 35);
-            this.btnDelete.TabIndex = 20;
+            this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -148,7 +148,7 @@
             this.btnEdit.Location = new System.Drawing.Point(72, 362);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(86, 35);
-            this.btnEdit.TabIndex = 19;
+            this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -280,7 +280,7 @@
             this.txbBillDate.Location = new System.Drawing.Point(165, 129);
             this.txbBillDate.Name = "txbBillDate";
             this.txbBillDate.Size = new System.Drawing.Size(164, 27);
-            this.txbBillDate.TabIndex = 39;
+            this.txbBillDate.TabIndex = 1;
             // 
             // cbxWareID
             // 
@@ -289,7 +289,7 @@
             this.cbxWareID.Location = new System.Drawing.Point(165, 265);
             this.cbxWareID.Name = "cbxWareID";
             this.cbxWareID.Size = new System.Drawing.Size(164, 29);
-            this.cbxWareID.TabIndex = 38;
+            this.cbxWareID.TabIndex = 4;
             this.cbxWareID.Click += new System.EventHandler(this.cbxWareID_Click);
             // 
             // cbxCustID
@@ -299,7 +299,7 @@
             this.cbxCustID.Location = new System.Drawing.Point(165, 219);
             this.cbxCustID.Name = "cbxCustID";
             this.cbxCustID.Size = new System.Drawing.Size(164, 29);
-            this.cbxCustID.TabIndex = 37;
+            this.cbxCustID.TabIndex = 3;
             this.cbxCustID.Click += new System.EventHandler(this.cbxCustID_Click);
             // 
             // cbxProductID
@@ -309,7 +309,7 @@
             this.cbxProductID.Location = new System.Drawing.Point(165, 173);
             this.cbxProductID.Name = "cbxProductID";
             this.cbxProductID.Size = new System.Drawing.Size(164, 29);
-            this.cbxProductID.TabIndex = 36;
+            this.cbxProductID.TabIndex = 2;
             this.cbxProductID.Click += new System.EventHandler(this.cbxProductID_Click);
             // 
             // label9
