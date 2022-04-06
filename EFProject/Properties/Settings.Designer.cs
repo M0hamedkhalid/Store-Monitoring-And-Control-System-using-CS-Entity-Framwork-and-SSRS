@@ -32,5 +32,16 @@ namespace EFProject.Properties {
                 return ((string)(this["ProjectEF2022ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=sqlproject.database.windows.net;Initial Catalog=sqlproject;Persist Se" +
+            "curity Info=True;User ID=sqlproject;Password=Project2022")]
+        public string sqlprojectConnectionString {
+            get {
+                return ((string)(this["sqlprojectConnectionString"]));
+            }
+        }
     }
 }

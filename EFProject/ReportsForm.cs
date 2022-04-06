@@ -25,8 +25,9 @@ namespace EFProject
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
-            this.reportViewer1.ServerReport.ReportPath = "/Report Project3/Report1";
+            MessageBox.Show("sdasd");
+            this.reportViewer1.LocalReport.DisplayName = "ReportName";
+            this.reportViewer1.LocalReport.ReportPath = "D:/ITI/C#/ADO & LINQ/Project/EFProject/EFProject/Reports/Report2.rdlc";
             this.reportViewer1.RefreshReport();
 
         }
@@ -53,6 +54,11 @@ namespace EFProject
         {
             this.reportViewer1.ServerReport.ReportPath = "/Report5/Report5";
             this.reportViewer1.RefreshReport();
+        }
+
+        private void ReportsForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

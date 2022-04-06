@@ -28,7 +28,11 @@ namespace EFProject
             dataGridView1.DataSource = list;
 
         }
-
+        private static void DisplayMessageBox(bool flag)
+        {
+            AbokhaledMBox messageBox = new AbokhaledMBox(flag);
+            messageBox.ShowDialog();
+        }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -64,10 +68,17 @@ namespace EFProject
                     warehouse.Name = txbName.Text;
                     warehouse.Address = txbAdd.Text;
                     warehouse.MgrName = txbMgr.Text;
-                    
+
 
 
                 }
+                DisplayMessageBox(true);
+
+            }
+            else
+            {
+                DisplayMessageBox(false);
+
             }
             _context.SaveChanges();
         }
@@ -97,14 +108,19 @@ namespace EFProject
 
                     _context.Warehouses.Add(warehouse);
 
-                    MessageBox.Show("Action Is Done");
+                    DisplayMessageBox(true);
 
                 }
                 else
                 {
-                    MessageBox.Show("Action Is Not Done");
+                    DisplayMessageBox(false);
 
                 }
+
+            }
+            else
+            {
+                DisplayMessageBox(false);
 
             }
 
@@ -131,6 +147,13 @@ namespace EFProject
             if (supplier != null)
             {
                 _context.Suppliers.Remove(supplier);
+                DisplayMessageBox(true);
+
+            }
+            else
+            {
+                DisplayMessageBox(false);
+
             }
             _context.SaveChanges();
             BindDataToDataGrid();

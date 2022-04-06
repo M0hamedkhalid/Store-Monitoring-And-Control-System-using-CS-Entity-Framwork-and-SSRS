@@ -22,7 +22,11 @@ namespace EFProject
             var list = _context.Customers.ToList();
             dataGridView1.DataSource = list;
         }
-
+        private static void DisplayMessageBox(bool flag)
+        {
+            AbokhaledMBox messageBox = new AbokhaledMBox(flag);
+            messageBox.ShowDialog();
+        }
         private void MakeTextBoxBlank()
         {
             foreach (var control in panel1.Controls)
@@ -57,12 +61,17 @@ namespace EFProject
 
                     _context.Customers.Add(newCustomer);
 
-                    MessageBox.Show("Action Is Done");
+                    DisplayMessageBox(true);
+
                 }
                 else
                 {
-                    MessageBox.Show("Action Is Not Done");
+                    DisplayMessageBox(false);
                 }
+            }
+            else
+            {
+                DisplayMessageBox(false);
             }
 
             _context.SaveChanges();
@@ -115,6 +124,12 @@ namespace EFProject
                     customer.Mobile = double.Parse(txbMobile.Text);
                     customer.Phone = double.Parse(txbPhone.Text);
                 }
+                DisplayMessageBox(true);
+
+            }
+            else
+            {
+                DisplayMessageBox(false);
             }
             _context.SaveChanges();
         }
@@ -131,6 +146,13 @@ namespace EFProject
             if (customer != null)
             {
                 _context.Customers.Remove(customer);
+                DisplayMessageBox(true);
+
+            }
+            else
+            {
+                DisplayMessageBox(false);
+
             }
             _context.SaveChanges();
             BindDataToDataGrid();

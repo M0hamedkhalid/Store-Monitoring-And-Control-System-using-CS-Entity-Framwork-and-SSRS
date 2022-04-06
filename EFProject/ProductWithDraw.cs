@@ -27,6 +27,11 @@ namespace EFProject
             dataGridView1.DataSource = list;
 
         }
+        private static void DisplayMessageBox(bool flag)
+        {
+            AbokhaledMBox messageBox = new AbokhaledMBox(flag);
+            messageBox.ShowDialog();
+        }
         void RemoveCBItems()
         {
             cbxWareID.DataSource = null;
@@ -73,14 +78,22 @@ namespace EFProject
 
                     _context.CustomerBills.Add(bill);
 
-                    MessageBox.Show("Action Is Done");
+                    DisplayMessageBox(true);
+
 
                 }
                 else
                 {
-                    MessageBox.Show("Action Is Not Done");
+                    DisplayMessageBox(false);
+
 
                 }
+
+            }
+            else
+            {
+                DisplayMessageBox(false);
+
 
             }
 
@@ -112,8 +125,15 @@ namespace EFProject
 
 
                 }
+                _context.SaveChanges();
+
+                DisplayMessageBox(false);
             }
-            _context.SaveChanges();
+            else
+            {
+                    DisplayMessageBox(false);
+
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -191,8 +211,15 @@ namespace EFProject
             if (custBill != null)
             {
                 _context.CustomerBills.Remove(custBill);
+                _context.SaveChanges();
+                DisplayMessageBox(true);
+
             }
-            _context.SaveChanges();
+            else
+            {
+                DisplayMessageBox(false);
+            }
+
             BindDataToDataGrid();
             MakeTextBoxBlank();
         }

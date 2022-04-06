@@ -104,7 +104,13 @@ namespace EFProject
                 }
 
                 _context.SaveChangesAsync();
-                MessageBox.Show("Action Done");
+                DisplayMessageBox(true);
+
+            }
+            else
+            {
+                DisplayMessageBox(false);
+
             }
             BindDataToDataGrid();
         }
@@ -115,7 +121,7 @@ namespace EFProject
             if (product == null)
             {
 
-                product = new Product() { ID = int.Parse(txbProductID.Text.Trim()), Name = txbProductName.Text.Trim() , SupplierID =int.Parse( cbxProductSuppliers.Text) };
+                product = new Product() { ID = int.Parse(txbProductID.Text.Trim()), Name = txbProductName.Text.Trim(), SupplierID = int.Parse(cbxProductSuppliers.Text) };
                 string[] units = txbProductUnits.Text.Trim().Split(',');
                 for (int i = 0; i < units.Length; i++)
                 {
@@ -128,11 +134,22 @@ namespace EFProject
                 }
                 _context.Products.Add(product);
                 _context.SaveChangesAsync();
-                MessageBox.Show("Action Done");
+                DisplayMessageBox(true);
+
+            }
+            else
+            {
+                DisplayMessageBox(false);
 
             }
             BindDataToDataGrid();
 
+        }
+
+        private static void DisplayMessageBox(bool flag)
+        {
+            AbokhaledMBox messageBox = new AbokhaledMBox(flag);
+            messageBox.ShowDialog();
         }
 
         private void cbxProductSuppliers_Click(object sender, EventArgs e)
@@ -149,9 +166,19 @@ namespace EFProject
         private async void button2_Click(object sender, EventArgs e)
         {
             var wantedProduct = _context.Products.Find(int.Parse(txbProductID.Text));
-            
-            _context.Products.Remove(wantedProduct);
-            await _context.SaveChangesAsync();
+            if (wantedProduct != null)
+            {
+                _context.Products.Remove(wantedProduct);
+                await _context.SaveChangesAsync();
+                DisplayMessageBox(true);
+
+            }
+            else
+            {
+                DisplayMessageBox(false);
+
+            }
+
             BindDataToDataGrid();
 
         }
