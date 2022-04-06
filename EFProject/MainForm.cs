@@ -1,30 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EFProject
 {
     public partial class MainForm : Form
     {
-        Form _activeForm;
+        private Form _activeForm;
+
         public MainForm()
         {
             InitializeComponent();
         }
 
-
         // To Make Form Movable
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
+        private static extern void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private static extern void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         private void pnlHeader_MouseDown(object sender, MouseEventArgs e)
         {
@@ -43,15 +37,11 @@ namespace EFProject
             catch (Exception)
             {
                 n = "0";
-
-
             }
-             
+
             if (_activeForm != null && n != childForm.Name)
             {
                 _activeForm.Close();
-                
-
             }
 
             if (n != childForm.Name)
@@ -65,16 +55,14 @@ namespace EFProject
                 _activeForm.Show();
                 panelLeft.Width = 58;
             }
-
-
-
         }
+
         //
         // handle Close/mini/maxmi Icons
         private void iconNormal_Click(object sender, EventArgs e)
         {
             this.iconMaximize.Visible = true;
-            this.iconNormal.Visible=false;
+            this.iconNormal.Visible = false;
             this.WindowState = FormWindowState.Normal;
         }
 
@@ -115,10 +103,8 @@ namespace EFProject
         private void MainForm_Load(object sender, EventArgs e)
         {
             OpenMainForm();
-
         }
 
-        
         private void btnProd_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ProductForm());
@@ -147,7 +133,6 @@ namespace EFProject
         private void btnReceivedProducts_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ReceivedProductsForm());
-
         }
 
         private void btnProductWithDraw_Click(object sender, EventArgs e)
@@ -157,9 +142,7 @@ namespace EFProject
 
         private void btnReports_Click(object sender, EventArgs e)
         {
-
             OpenChildForm(new ReportsForm());
-
         }
     }
 }

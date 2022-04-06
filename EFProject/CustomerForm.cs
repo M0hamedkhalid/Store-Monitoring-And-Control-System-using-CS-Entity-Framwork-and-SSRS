@@ -22,11 +22,13 @@ namespace EFProject
             var list = _context.Customers.ToList();
             dataGridView1.DataSource = list;
         }
+
         private static void DisplayMessageBox(bool flag)
         {
             AbokhaledMBox messageBox = new AbokhaledMBox(flag);
             messageBox.ShowDialog();
         }
+
         private void MakeTextBoxBlank()
         {
             foreach (var control in panel1.Controls)
@@ -62,7 +64,6 @@ namespace EFProject
                     _context.Customers.Add(newCustomer);
 
                     DisplayMessageBox(true);
-
                 }
                 else
                 {
@@ -125,7 +126,6 @@ namespace EFProject
                     customer.Phone = double.Parse(txbPhone.Text);
                 }
                 DisplayMessageBox(true);
-
             }
             else
             {
@@ -147,12 +147,10 @@ namespace EFProject
             {
                 _context.Customers.Remove(customer);
                 DisplayMessageBox(true);
-
             }
             else
             {
                 DisplayMessageBox(false);
-
             }
             _context.SaveChanges();
             BindDataToDataGrid();

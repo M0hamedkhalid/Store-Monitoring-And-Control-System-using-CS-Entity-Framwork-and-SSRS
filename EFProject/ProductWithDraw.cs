@@ -1,19 +1,15 @@
 ﻿using EFProject.DataBaseModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EFProject
 {
     public partial class ProductWithDraw : Form
     {
-        StoreDb _context;
+        private StoreDb _context;
 
         public ProductWithDraw()
         {
@@ -21,18 +17,20 @@ namespace EFProject
             _context = new StoreDb();
             BindDataToDataGrid();
         }
-        void BindDataToDataGrid()
+
+        private void BindDataToDataGrid()
         {
             var list = _context.CustomerBills.ToList();
             dataGridView1.DataSource = list;
-
         }
+
         private static void DisplayMessageBox(bool flag)
         {
             AbokhaledMBox messageBox = new AbokhaledMBox(flag);
             messageBox.ShowDialog();
         }
-        void RemoveCBItems()
+
+        private void RemoveCBItems()
         {
             cbxWareID.DataSource = null;
             cbxWareID.Text = "";
@@ -40,9 +38,9 @@ namespace EFProject
             cbxCustID.Text = "";
             cbxProductID.DataSource = null;
             cbxProductID.Text = "";
-
         }
-        void MakeTextBoxBlank()
+
+        private void MakeTextBoxBlank()
         {
             foreach (var control in panel1.Controls)
             {
@@ -53,9 +51,9 @@ namespace EFProject
                 }
             }
             RemoveCBItems();
-
         }
-        void Add()
+
+        private void Add()
         {
             if (txbID.Text != "" && cbxCustID.Text != "" && cbxCustID.Text != "" && cbxWareID.Text != "" && txbCount.Text != "")
 
@@ -73,41 +71,31 @@ namespace EFProject
                         CustomerID = int.Parse(cbxCustID.Text),
                         WarehouseID = int.Parse(cbxWareID.Text),
                         Count = int.Parse(txbCount.Text)
-
                     };
 
                     _context.CustomerBills.Add(bill);
 
                     DisplayMessageBox(true);
-
-
                 }
                 else
                 {
                     DisplayMessageBox(false);
-
-
                 }
-
             }
             else
             {
                 DisplayMessageBox(false);
-
-
             }
 
             _context.SaveChanges();
-
-
         }
+
         private void Edit()
         {
             int id = Convert.ToInt32(txbID.Text.Trim());
             int prodID = int.Parse(cbxProductID.Text);
             int supID = int.Parse(cbxCustID.Text);
             int warID = int.Parse(cbxWareID.Text);
-
 
             //var editThisBill = _context.SupplierBills.Where(b => b.SupplierID == supID && b.WarehouseID == warID
             //&& b.ProductID == prodID && b.BillNo == id).First();
@@ -121,9 +109,6 @@ namespace EFProject
                     bill.BillDate = DateTime.Parse(DateTime.Parse(txbBillDate.Text).ToString("MM/dd/yyyy"));
 
                     bill.Count = int.Parse(txbCount.Text);
-
-
-
                 }
                 _context.SaveChanges();
 
@@ -131,8 +116,7 @@ namespace EFProject
             }
             else
             {
-                    DisplayMessageBox(false);
-
+                DisplayMessageBox(false);
             }
         }
 
@@ -156,19 +140,17 @@ namespace EFProject
                     cbxWareID.Text = bill.WarehouseID.ToString();
                     cbxProductID.Text = bill.ProductID.ToString();
                     txbCount.Text = bill.Count.ToString();
-
                 }
             }
             catch (Exception)
             {
-
             }
         }
 
         private void cbxProductID_Click(object sender, EventArgs e)
         {
             var prodIDList = new List<int>();
-            prodIDList= _context.Products.Select(s => s.ID).ToList();
+            prodIDList = _context.Products.Select(s => s.ID).ToList();
 
             cbxProductID.DataSource = prodIDList;
         }
@@ -201,7 +183,6 @@ namespace EFProject
             Add();
             BindDataToDataGrid();
             MakeTextBoxBlank();
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -213,7 +194,6 @@ namespace EFProject
                 _context.CustomerBills.Remove(custBill);
                 _context.SaveChanges();
                 DisplayMessageBox(true);
-
             }
             else
             {

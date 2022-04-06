@@ -1,28 +1,23 @@
 ﻿using EFProject.DataBaseModel;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EFProject
 {
     public partial class ProductForm : Form
     {
-        StoreDb _context;
+        private StoreDb _context;
+
         public ProductForm()
         {
             InitializeComponent();
             _context = new StoreDb();
             BindDataToDataGrid();
-            
         }
 
-        void BindDataToDataGrid()
+        private void BindDataToDataGrid()
         {
             //var list =
 
@@ -36,11 +31,17 @@ namespace EFProject
             //{ ID = 3, Name = "Pepsi                                             ", SupplierID = 3, Unit = "liter     " }
 
             var list2 = _context.Products.
-                Select(a => new { ID = a.ID, Name = a.Name, SupplierID = a.SupplierID, Unit =  a.ProductUnits
-                .Select(e => e.Unit) } ).ToList()
-                .Select(s=> new {ID = s.ID , Name = s.Name , SupplierID = s.SupplierID , Units =string.Join(",", s.Unit) })
+                Select(a => new
+                {
+                    ID = a.ID,
+                    Name = a.Name,
+                    SupplierID = a.SupplierID,
+                    Unit = a.ProductUnits
+                .Select(e => e.Unit)
+                }).ToList()
+                .Select(s => new { ID = s.ID, Name = s.Name, SupplierID = s.SupplierID, Units = string.Join(",", s.Unit) })
                 .ToList();
-            
+
             ///List2
             ///
 
@@ -48,10 +49,7 @@ namespace EFProject
             //{ ID = 2, Name = "7Up  ", SupplierID = 2, Units = "liter     " }
             //{ ID = 3, Name = "Pepsi   ", SupplierID = 3, Units = "liter     " }
 
-
-
             dataGridView1.DataSource = list2;
-            
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -60,8 +58,6 @@ namespace EFProject
             {
                 int row = e.RowIndex;
                 int id = (int)dataGridView1.Rows[row].Cells[0].Value;
-
-
 
                 var wantedProduct = _context.Products.Find(id);
                 if (wantedProduct != null)
@@ -79,9 +75,7 @@ namespace EFProject
             }
             catch (Exception)
             {
-
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -95,22 +89,19 @@ namespace EFProject
                 string[] units = txbProductUnits.Text.Trim().Split(',');
                 for (int i = 0; i < units.Length; i++)
                 {
-                    if (i ==0)
+                    if (i == 0)
                     {
                         wantedProduct.ProductUnits.Clear();
-
                     }
-                    wantedProduct.ProductUnits.Add(new ProductUnit { Unit = units[i].Trim() , Product = wantedProduct , ProductID = wantedProduct.ID  });
+                    wantedProduct.ProductUnits.Add(new ProductUnit { Unit = units[i].Trim(), Product = wantedProduct, ProductID = wantedProduct.ID });
                 }
 
                 _context.SaveChangesAsync();
                 DisplayMessageBox(true);
-
             }
             else
             {
                 DisplayMessageBox(false);
-
             }
             BindDataToDataGrid();
         }
@@ -120,7 +111,6 @@ namespace EFProject
             var product = _context.Products.Find(int.Parse(txbProductID.Text.Trim()));
             if (product == null)
             {
-
                 product = new Product() { ID = int.Parse(txbProductID.Text.Trim()), Name = txbProductName.Text.Trim(), SupplierID = int.Parse(cbxProductSuppliers.Text) };
                 string[] units = txbProductUnits.Text.Trim().Split(',');
                 for (int i = 0; i < units.Length; i++)
@@ -128,22 +118,18 @@ namespace EFProject
                     if (i == 0)
                     {
                         product.ProductUnits.Clear();
-
                     }
                     product.ProductUnits.Add(new ProductUnit { Unit = units[i].Trim(), Product = product, ProductID = product.ID });
                 }
                 _context.Products.Add(product);
                 _context.SaveChangesAsync();
                 DisplayMessageBox(true);
-
             }
             else
             {
                 DisplayMessageBox(false);
-
             }
             BindDataToDataGrid();
-
         }
 
         private static void DisplayMessageBox(bool flag)
@@ -171,16 +157,13 @@ namespace EFProject
                 _context.Products.Remove(wantedProduct);
                 await _context.SaveChangesAsync();
                 DisplayMessageBox(true);
-
             }
             else
             {
                 DisplayMessageBox(false);
-
             }
 
             BindDataToDataGrid();
-
         }
     }
 }
